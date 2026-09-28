@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Babykelo: Drummer, Producer & Music Director | Aramogho Oghenekevwe Samuel</title>
+  <meta name="description" content="Babykelo (Aramogho Oghenekevwe Samuel) is a Nigerian drummer, producer and music director who has worked with Wizkid, Ada Ehi and Tim Godfrey. He is a Flystickz & Centent artist. Watch 150+ performances or book a remote drum session.">
+  <meta name="theme-color" content="#0b0806">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://babykelo.netlify.app/">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Babykelo">
+  <meta property="og:url" content="https://babykelo.netlify.app/">
+  <meta property="og:title" content="Babykelo: Drummer · Producer · Music Director">
+  <meta property="og:description" content="Babykelo (Aramogho Oghenekevwe Samuel) is a Nigerian drummer, producer and music director who has worked with Wizkid, Ada Ehi and Tim Godfrey. He is a Flystickz & Centent artist. Watch 150+ performances or book a remote drum session.">
+  <meta property="og:image" content="https://babykelo.netlify.app/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Babykelo, drummer, producer and music director, holding his Flystickz signature drumsticks">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Babykelo: Drummer · Producer · Music Director">
+  <meta name="twitter:description" content="Babykelo (Aramogho Oghenekevwe Samuel) is a Nigerian drummer, producer and music director who has worked with Wizkid, Ada Ehi and Tim Godfrey. He is a Flystickz & Centent artist. Watch 150+ performances or book a remote drum session.">
+  <meta name="twitter:image" content="https://babykelo.netlify.app/assets/og.jpg">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Aramogho Oghenekevwe Samuel", "alternateName": ["Babykelo", "BabyKelo", "Baby Kelo"], "url": "https://babykelo.netlify.app/", "image": "https://babykelo.netlify.app/assets/kelo.jpg", "jobTitle": ["Drummer", "Music Producer", "Music Director", "Live Arranger", "Mixing Engineer"], "description": "Nigerian drummer, creative producer, music director, live arranger and mixing & mastering engineer from Delta State. Remote studio drum sessions available worldwide.", "nationality": {"@type": "Country", "name": "Nigeria"}, "homeLocation": {"@type": "Place", "name": "Lagos, Nigeria"}, "knowsAbout": ["Drums", "Afrobeats", "Highlife", "Gospel music", "Music production", "Music direction", "Mixing and mastering"], "affiliation": [{"@type": "MusicGroup", "name": "Voice of Karis (VOK Ent)", "sameAs": "https://www.instagram.com/vok_ent/"}, {"@type": "MusicGroup", "name": "MaskTunes", "sameAs": "https://www.instagram.com/masktunes/"}], "sameAs": ["https://www.instagram.com/babykelo/", "https://www.youtube.com/@babykelo0", "https://www.facebook.com/babykelo", "https://flystickz.com/artist-page-2/"]}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="importmap">
+    { "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+    } }
+  </script>
+</head>
+<body class="is-locked">
+
+  <canvas id="stage" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span></span></div>
+
+  <!-- ░░ GATE — the count-in ░░ -->
+  <section class="gate" id="gate" aria-label="Enter">
+    <div class="gate__inner">
+      <div class="gate__logo" data-logo aria-hidden="true"></div>
+      <p class="mono gate__kicker">Aramogho Oghenekevwe Samuel presents</p>
+      <h1 class="gate__title">BABY<em>KELO</em></h1>
+      <p class="gate__lede">Headphones on. Volume up. <br>The kit is about to speak.</p>
+      <button class="gate__btn" id="enter" data-magnetic>
+        <span class="gate__ring"></span>
+        <span class="gate__label">Tap to<br>count in</span>
+      </button>
+      <button class="gate__quiet mono" id="enterQuiet">enter without sound</button>
+    </div>
+    <div class="gate__count" id="count" aria-live="polite"></div>
+    <div class="gate__load mono" id="load">tuning drums <b>0%</b></div>
+  </section>
+
+  <!-- ░░ NAV ░░ -->
+  <header class="nav">
+    <a href="#home" class="nav__logo" aria-label="Babykelo home"><span data-logo></span><i></i></a>
+    <nav class="nav__links">
+      <a href="#story">Story</a>
+      <a href="#frames">Frames</a>
+      <a href="#roles">Craft</a>
+      <a href="#journey">Journey</a>
+      <a href="#endorsements">Brands</a>
+      <a href="#vault">Videos</a>
+      <a href="#kit">Play</a>
+      <a href="contact.html" class="nav__cta">Work with him</a>
+    </nav>
+    <button class="nav__menu" id="menuBtn" aria-label="Open menu"><span></span><span></span></button>
+  </header>
+  <div class="menu" id="menu">
+    <a href="#story">Story</a><a href="#frames">Frames</a><a href="#roles">Craft</a><a href="#journey">Journey</a><a href="#endorsements">Endorsements</a><a href="#vault">Videos</a><a href="#kit">Play the kit</a><a href="contact.html">Work with him</a>
+  </div>
+
+  <main id="smooth">
+
+    <!-- ░░ HERO ░░ -->
+    <section class="hero" id="home" data-shot>
+      <div class="hero__meta mono">
+        <span>Delta State → Lagos, NG</span>
+        <span class="live-dot"><span id="heroNowLabel">Now playing</span> <b id="heroBpm">Afro Pocket · 104 BPM</b></span>
+      </div>
+      <h2 class="hero__word" id="heroWord" aria-label="Babykelo">
+        <span>B</span><span>A</span><span>B</span><span>Y</span><span class="o">K</span><span class="o">E</span><span class="o">L</span><span class="o">O</span>
+      </h2>
+      <div class="hero__foot">
+        <p class="hero__roles">
+          <span>Drummer</span><span>Producer</span><span>Music Director</span><span>Live Arranger</span><span>Mix Engineer</span>
+        </p>
+        <p class="hero__quote serif">“He played every object around him like a drum — <em>now the whole country listens.</em>”</p>
+      </div>
+      <a href="#story" class="hero__scroll mono" aria-label="Scroll down"><i></i>scroll</a>
+    </section>
+
+    <!-- ░░ MARQUEE ░░ -->
+    <section class="marquee" aria-label="Artists Babykelo has worked with">
+      <div class="marquee__label mono">On stage & in session with</div>
+      <div class="marquee__track" id="marquee"></div>
+      <div class="marquee__track marquee__track--rev" id="marquee2"></div>
+    </section>
+
+    <!-- ░░ STORY ░░ -->
+    <section class="story" id="story" data-shot>
+      <div class="story__photo" data-tilt>
+        <img src="assets/kelo.jpg" alt="Babykelo holding bundles of Flystickz drumsticks, smiling" loading="lazy">
+        <div class="story__photo-glow"></div>
+        <span class="story__tag mono">Flystickz artist · Lagos</span>
+      </div>
+      <div class="story__text">
+        <p class="eyebrow mono">01 — Origin</p>
+        <h2 class="h2 reveal">The boy who drummed <em class="serif">on everything.</em></h2>
+        <p class="lead reveal">Born on <b>December 22nd</b> and raised with the rhythms of <b>Delta State</b>, Aramogho Oghenekevwe Samuel was tapping out grooves on tables, buckets, doors, anything that would answer back, long before he ever owned a pair of sticks.</p>
+        <p class="reveal">His mother loved good music. Through her, the sounds of the <b>1980s</b> filled the house, and those records built the rhythmic and melodic foundation he still plays from. Highlife swing, gospel fire, funk pocket, the talking drum's voice: it's all in there.</p>
+        <p class="reveal">Today <b>Babykelo</b> is one of Nigeria's most sought-after professional drummers. He's a creative producer, a music director, a live arranger and a mixing & mastering engineer, and he has shared stages with <b>Wizkid</b>, <b>Ada Ehi</b> and <b>Tim Godfrey</b>, among many others.</p>
+        <ul class="facts reveal">
+          <li><span class="mono">Born</span><b>December 22</b></li>
+          <li><span class="mono">From</span><b>Delta State, Nigeria</b></li>
+          <li><span class="mono">Star Quest 2012</span><b>Band finalist · 3rd place</b></li>
+          <li><span class="mono">Music Director</span><b>Voice of Karis (V.O.K)</b></li>
+          <li><span class="mono">Band Leader</span><b>MaskTunes</b></li>
+          <li><span class="mono">Signature sticks</span><b>Flystickz BabyKelo 5B</b></li>
+          <li><span class="mono">Endorsed by</span><b>Flystickz · Centent Cymbals</b></li>
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- ░░ FRAMES — photo strip from his performances ░░ -->
+    <section class="frames" id="frames" aria-label="Photos of Babykelo performing">
+      <div class="frames__head">
+        <p class="eyebrow mono">02 — In frame</p>
+        <h2 class="h2">Caught <em class="serif">mid-groove.</em></h2>
+        <p class="lead">Stills from the sessions, the stages and the studio. Tap any frame to watch the moment.</p>
+      </div>
+      <div class="frames__strip" id="framesStrip"></div>
+    </section>
+
+    <!-- ░░ ROLES — horizontal ░░ -->
+    <section class="roles" id="roles" data-shot>
+      <div class="roles__pin">
+        <div class="roles__head">
+          <p class="eyebrow mono">03 — The Craft</p>
+          <h2 class="h2">Five instruments. <em class="serif">One man.</em></h2>
+        </div>
+        <div class="roles__track" id="rolesTrack">
+          <article class="role" data-tilt>
+            <span class="role__n mono">01</span>
+            <svg class="role__icon" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="24" rx="22" ry="7"/><path d="M10 24v18c0 4 10 7 22 7s22-3 22-7V24"/><path d="M8 6l20 16M56 6L36 22"/></svg>
+            <h3>Drummer</h3>
+            <p>Performing and recording drummer. He plays deep in the pocket and swings like highlife, and when a solo drops he goes all the way. Ask <em>Terminator</em>.</p>
+            <span class="role__tag mono">Live · Studio · Sessions</span>
+          </article>
+          <article class="role" data-tilt>
+            <span class="role__n mono">02</span>
+            <svg class="role__icon" viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="14" width="48" height="36" rx="4"/><circle cx="22" cy="32" r="7"/><circle cx="42" cy="32" r="7"/><path d="M8 22h48"/></svg>
+            <h3>Producer</h3>
+            <p>A creative producer who builds records from the rhythm up. <em>“Babykelo also produces.”</em> He said it himself, back in 2020.</p>
+            <span class="role__tag mono">Beats · Arrangement</span>
+          </article>
+          <article class="role" data-tilt>
+            <span class="role__n mono">03</span>
+            <svg class="role__icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M12 52L44 12"/><circle cx="46" cy="10" r="3"/><path d="M20 20c8 4 8 12 0 16M30 16c12 6 12 22 0 28"/></svg>
+            <h3>Music Director</h3>
+            <p>Music director for <b>Voice of Karis</b>, and producer & MD for <b>VOK Ent</b> and <b>MaskTunes</b>. He leads the band, reads the room and shapes the show.</p>
+            <span class="role__tag mono">V.O.K · MaskTunes</span>
+          </article>
+          <article class="role" data-tilt>
+            <span class="role__n mono">04</span>
+            <svg class="role__icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M6 44h10V28h10v24h10V16h10v20h12"/></svg>
+            <h3>Live Arranger</h3>
+            <p>He turns studio records into stage moments, with transitions, builds, drops and breakdowns that make a crowd forget to breathe.</p>
+            <span class="role__tag mono">Stage · Worship · Concerts</span>
+          </article>
+          <article class="role" data-tilt>
+            <span class="role__n mono">05</span>
+            <svg class="role__icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M14 8v48M32 8v48M50 8v48"/><rect x="9" y="36" width="10" height="6" rx="1"/><rect x="27" y="18" width="10" height="6" rx="1"/><rect x="45" y="28" width="10" height="6" rx="1"/></svg>
+            <h3>Mix Engineer</h3>
+            <p>Mixing & mastering engineer. The same ears that tune a snare are the ones that polish your record for release.</p>
+            <span class="role__tag mono">Mixing · Mastering</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ STATS ░░ -->
+    <section class="stats" aria-label="By the numbers">
+      <div class="stat"><b data-count="152">0</b><span class="mono">videos in the vault</span></div>
+      <div class="stat"><b data-count="475" data-suffix="K+">0</b><span class="mono">views & counting</span></div>
+      <div class="stat"><b data-count="20" data-suffix="K+">0</b><span class="mono">Instagram followers</span></div>
+      <div class="stat"><b data-count="7" data-suffix="K+">0</b><span class="mono">YouTube subscribers</span></div>
+    </section>
+
+    <!-- ░░ JOURNEY ░░ -->
+    <section class="journey" id="journey" data-shot>
+      <p class="eyebrow mono">04 — Journey</p>
+      <h2 class="h2">Every era <em class="serif">has a groove.</em></h2>
+      <ol class="timeline" id="timeline"></ol>
+    </section>
+
+    <!-- ░░ ENDORSEMENTS & BANDS ░░ -->
+    <section class="endorse" id="endorsements">
+      <p class="eyebrow mono">05 — Endorsements & bands</p>
+      <h2 class="h2">Backed by the brands. <em class="serif">Trusted by the band.</em></h2>
+
+      <div class="endorse__grid">
+        <article class="brand" data-tilt>
+          <div class="brand__img"><img src="assets/kelo.jpg" alt="Babykelo holding bundles of his Flystickz signature drumsticks" loading="lazy"></div>
+          <div class="brand__body">
+            <span class="brand__tag mono">Signature artist</span>
+            <h3>Flystickz</h3>
+            <p class="brand__product">BabyKelo Signature Series · 5B</p>
+            <p>He has his own drumstick. Flystickz built the BabyKelo 5B for drummers who love power and control: strong enough for heavy grooves, balanced for smooth chops and fills. He also fronted the Flystickz artist series, unveiling signature sticks with fellow drummers.</p>
+            <div class="brand__links">
+              <a href="https://flystickz.com/artist-page-2/" target="_blank" rel="noopener">Artist page ↗</a>
+              <button data-vid="iJm25JzbVL8">▶ Watch the series</button>
+            </div>
+          </div>
+        </article>
+        <article class="brand" data-tilt>
+          <div class="brand__img"><img src="https://i.ytimg.com/vi/6MnOI_fDZO8/hqdefault.jpg" alt="Babykelo's Centent Cymbals artist unveiling" loading="lazy"></div>
+          <div class="brand__body">
+            <span class="brand__tag mono">Endorsed artist</span>
+            <h3>Centent</h3>
+            <p class="brand__product">Cymbals & Gongs</p>
+            <p>Officially unveiled as a Centent Cymbals & Gongs artist in 2025. The shimmer, the washes and the crashes in his latest sessions come from his Centent brass.</p>
+            <div class="brand__links">
+              <a href="https://www.instagram.com/cententcymbals/" target="_blank" rel="noopener">@cententcymbals ↗</a>
+              <button data-vid="6MnOI_fDZO8">▶ Watch the unveiling</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="endorse__sub mono">The bands he leads</h3>
+      <div class="bands">
+        <article class="band" data-tilt>
+          <span class="band__mono" aria-hidden="true">V·O·K</span>
+          <div>
+            <span class="brand__tag mono">Music Director & Producer</span>
+            <h3>Voice of Karis</h3>
+            <p>As music director and producer for <b>Voice of Karis (VOK Ent)</b>, Babykelo shapes the sound: the arrangements, the band and the way every set moves from worship to celebration.</p>
+            <a href="https://www.instagram.com/vok_ent/" target="_blank" rel="noopener" class="band__link">@vok_ent ↗</a>
+          </div>
+        </article>
+        <article class="band" data-tilt>
+          <span class="band__mono" aria-hidden="true">MASK<br>TUNES</span>
+          <div>
+            <span class="brand__tag mono">Band Leader · Producer & MD</span>
+            <h3>MaskTunes</h3>
+            <p>He leads the <b>MaskTunes</b> band from the kit, producing, directing and counting it in. The same pocket you hear in his sessions, with a full band behind it.</p>
+            <a href="https://www.instagram.com/masktunes/" target="_blank" rel="noopener" class="band__link">@masktunes ↗</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="featured">
+        <span class="mono">Featured by</span>
+        <a href="https://www.youtube.com/@drumquarters" target="_blank" rel="noopener">Drum Quarters</a>
+        <a href="https://www.youtube.com/watch?v=eHcExVZMjs0" target="_blank" rel="noopener">Toch Sticks Music</a>
+        <a href="https://www.youtube.com/watch?v=Lo5rTecxIuY" target="_blank" rel="noopener">Drum Session Lagos</a>
+        <span class="mono">Star Quest 2012 · 3rd place</span>
+      </div>
+    </section>
+
+    <!-- ░░ VAULT ░░ -->
+    <section class="vault" id="vault" data-shot>
+      <div class="vault__head">
+        <p class="eyebrow mono">06 — The Vault</p>
+        <h2 class="h2">Every video. <em class="serif">Every hit.</em></h2>
+        <p class="lead">All <b id="vaultCount">152</b> performances in one place, from the first 2020 uploads to this month's. There are the <em>Babykelo Sessions</em>, gospel nights, live shows, brand unveilings and features. Press play on any video and the groove steps aside.</p>
+      </div>
+
+      <div class="carousel" id="carousel" aria-label="Most watched">
+        <div class="carousel__label mono">Most watched <span>— drag or use the arrows</span></div>
+        <div class="carousel__stage"><div class="carousel__ring" id="ring"></div></div>
+        <div class="carousel__ctrl">
+          <button class="icon-btn" id="ringPrev" aria-label="Previous">←</button>
+          <p class="carousel__title" id="ringTitle"></p>
+          <button class="icon-btn" id="ringNext" aria-label="Next">→</button>
+        </div>
+      </div>
+
+      <div class="filters" role="toolbar" aria-label="Filter videos">
+        <div class="chips" id="chips"></div>
+        <div class="filters__right">
+          <label class="search"><span class="sr">Search videos</span><input id="search" type="search" placeholder="Search a song, artist…" autocomplete="off"></label>
+          <select id="sort" aria-label="Sort videos">
+            <option value="new">Newest</option>
+            <option value="views">Most viewed</option>
+            <option value="old">Oldest</option>
+          </select>
+          <button class="shuffle" id="shuffle" data-magnetic>⤨ Shuffle</button>
+        </div>
+      </div>
+
+      <div class="grid" id="grid"></div>
+      <p class="grid__empty mono" id="empty" hidden>No videos match. Try another word.</p>
+
+      <div class="shorts">
+        <div class="shorts__head">
+          <h3 class="h3">Shorts <em class="serif">— quick hits</em></h3>
+          <span class="mono" id="shortsCount"></span>
+        </div>
+        <div class="shorts__row" id="shorts"></div>
+      </div>
+    </section>
+
+    <!-- ░░ PLAY THE KIT ░░ -->
+    <section class="kit" id="kit" data-shot>
+      <div class="kit__head">
+        <p class="eyebrow mono">07 — Your turn</p>
+        <h2 class="h2">Sit behind <em class="serif">his kit.</em></h2>
+        <p class="lead">Tap the pads, or use your keyboard. Jam along with the groove playing in the bar below, or switch styles, from Afro Pocket to Gospel Shed. The 3D kit behind you plays every hit.</p>
+      </div>
+      <div class="pads" id="pads"></div>
+      <p class="kit__hint mono">Keys: <kbd>Q</kbd><kbd>W</kbd><kbd>E</kbd><kbd>R</kbd> · <kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><kbd>F</kbd> · <kbd>Z</kbd><kbd>X</kbd><kbd>C</kbd><kbd>V</kbd></p>
+    </section>
+
+    <!-- ░░ CONTACT ░░ -->
+    <section class="contact" id="contact" data-shot>
+      <img class="contact__avatar" src="assets/avatar.jpg" alt="Babykelo behind the drum kit" loading="lazy">
+      <p class="eyebrow mono">08 — Bookings</p>
+      <h2 class="contact__big">Work with<br><em class="serif">Babykelo.</em></h2>
+      <p class="lead"><b>Remote studio sessions are open worldwide.</b> Send your song from anywhere and get real Babykelo drums back. He also takes concerts, church, music direction, arrangements, mixing and mastering.</p>
+      <div class="contact__ctas"><a href="contact.html" class="book-cta" data-magnetic><span>Work with Babykelo</span><i>→</i></a><a href="contact.html#remote" class="ghost-btn" data-magnetic>Remote sessions 🌍</a></div>
+      <div class="socials">
+        <a href="https://www.instagram.com/babykelo/" target="_blank" rel="noopener" data-magnetic>Instagram <span>@babykelo</span></a>
+        <a href="https://www.youtube.com/@babykelo0" target="_blank" rel="noopener" data-magnetic>YouTube <span>@babykelo0</span></a>
+        <a href="https://www.facebook.com/babykelo" target="_blank" rel="noopener" data-magnetic>Facebook <span>Aramogho Kewe</span></a>
+      </div>
+      <footer class="foot mono">
+        <span>© <span id="yr"></span> Aramogho Oghenekevwe Samuel · Babykelo</span>
+        <span>Every groove on this site is synthesised live in your browser.</span>
+      </footer>
+    </section>
+  </main>
+
+  <!-- ░░ MUSIC DOCK ░░ -->
+  <aside class="dock" id="dock" aria-label="Music player">
+    <button class="dock__play" id="play" aria-label="Play" aria-pressed="false">
+      <span class="dock__eq"><i></i><i></i><i></i><i></i></span>
+      <svg class="dock__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+    </button>
+    <div class="dock__body">
+      <div class="dock__now mono"><span id="dockStyle">Afro Pocket</span> · <span id="dockBpm">104</span> BPM</div>
+      <div class="dock__steps" id="steps"></div>
+    </div>
+    <div class="dock__skip">
+      <button id="prevTrack" aria-label="Previous groove">⏮</button>
+      <button id="nextTrack" aria-label="Next groove">⏭</button>
+    </div>
+    <div class="dock__styles" id="styles"></div>
+    <input class="dock__vol" id="vol" type="range" min="0" max="1" step="0.01" value="0.8" aria-label="Volume">
+    <canvas class="dock__viz" id="viz" width="120" height="36" aria-hidden="true"></canvas>
+  </aside>
+
+  <!-- ░░ GEAR CARD (tap a piece of the 3D kit) ░░ -->
+  <div class="gear" id="gear" role="dialog" aria-labelledby="gearTitle" hidden>
+    <button class="gear__x" id="gearClose" aria-label="Close">✕</button>
+    <span class="gear__tag mono" id="gearTag"></span>
+    <h3 id="gearTitle"></h3>
+    <p id="gearText"></p>
+    <div class="gear__actions" id="gearActions"></div>
+  </div>
+  <div class="gear-label mono" id="gearLabel" aria-hidden="true" hidden></div>
+  <p class="gear-hint mono" id="gearHint" hidden><i></i>Tap the cymbals, sticks &amp; drums: every piece has a story</p>
+
+  <!-- ░░ BACK / TOP ░░ -->
+  <button class="navbtn navbtn--back" id="backBtn" aria-label="Go back" hidden><span>←</span><b>Back</b></button>
+  <button class="navbtn navbtn--top" id="topBtn" aria-label="Back to top" hidden><span>↑</span></button>
+
+  <!-- ░░ PLAYER MODAL ░░ -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__box">
+      <div class="modal__frame" id="frame"></div>
+      <div class="modal__info">
+        <div>
+          <p class="mono modal__meta" id="modalMeta"></p>
+          <h3 id="modalTitle"></h3>
+        </div>
+        <div class="modal__actions">
+          <button class="icon-btn" id="prevVid" aria-label="Previous video">←</button>
+          <button class="icon-btn" id="nextVid" aria-label="Next video">→</button>
+          <a class="icon-btn icon-btn--wide" id="ytLink" target="_blank" rel="noopener">YouTube ↗</a>
+          <button class="icon-btn" data-close aria-label="Close">✕</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Work with Babykelo: Book a Drummer, Remote Drum Sessions & Music Direction</title>
+  <meta name="description" content="Book Babykelo for concerts, church, tours and studio sessions, or send your song from anywhere in the world for remote drum recording. He also offers music direction, arrangement, mixing and mastering.">
+  <meta name="theme-color" content="#0b0806">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://babykelo.netlify.app/contact.html">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Babykelo">
+  <meta property="og:url" content="https://babykelo.netlify.app/contact.html">
+  <meta property="og:title" content="Work with Babykelo: remote drum sessions & bookings">
+  <meta property="og:description" content="Book Babykelo for concerts, church, tours and studio sessions, or send your song from anywhere in the world for remote drum recording. He also offers music direction, arrangement, mixing and mastering.">
+  <meta property="og:image" content="https://babykelo.netlify.app/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Babykelo, drummer, producer and music director, holding his Flystickz signature drumsticks">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Work with Babykelo: remote drum sessions & bookings">
+  <meta name="twitter:description" content="Book Babykelo for concerts, church, tours and studio sessions, or send your song from anywhere in the world for remote drum recording. He also offers music direction, arrangement, mixing and mastering.">
+  <meta name="twitter:image" content="https://babykelo.netlify.app/assets/og.jpg">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Person", "name": "Aramogho Oghenekevwe Samuel", "alternateName": ["Babykelo", "BabyKelo", "Baby Kelo"], "url": "https://babykelo.netlify.app/", "image": "https://babykelo.netlify.app/assets/kelo.jpg", "jobTitle": ["Drummer", "Music Producer", "Music Director", "Live Arranger", "Mixing Engineer"], "description": "Nigerian drummer, creative producer, music director, live arranger and mixing & mastering engineer from Delta State. Remote studio drum sessions available worldwide.", "nationality": {"@type": "Country", "name": "Nigeria"}, "homeLocation": {"@type": "Place", "name": "Lagos, Nigeria"}, "knowsAbout": ["Drums", "Afrobeats", "Highlife", "Gospel music", "Music production", "Music direction", "Mixing and mastering"], "affiliation": [{"@type": "MusicGroup", "name": "Voice of Karis (VOK Ent)", "sameAs": "https://www.instagram.com/vok_ent/"}, {"@type": "MusicGroup", "name": "MaskTunes", "sameAs": "https://www.instagram.com/masktunes/"}], "sameAs": ["https://www.instagram.com/babykelo/", "https://www.youtube.com/@babykelo0", "https://www.facebook.com/babykelo", "https://flystickz.com/artist-page-2/"]}, {"@context": "https://schema.org", "@type": "Service", "name": "Remote studio drum sessions", "provider": {"@type": "Person", "name": "Babykelo"}, "areaServed": "Worldwide", "description": "Send your song from anywhere in the world; Babykelo records live drums and returns mix-ready stems."}]</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <script type="importmap">
+    { "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+    } }
+  </script>
+</head>
+<body class="page-book">
+  <canvas id="stage" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette vignette--deep" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a href="index.html" class="nav__logo" aria-label="Babykelo home"><span data-logo></span><i></i></a>
+    <nav class="nav__links">
+      <a href="index.html">Home</a>
+      <a href="index.html#vault">Videos</a>
+      <a href="#remote">Remote sessions</a>
+      <a href="#services">Services</a>
+      <a href="#press">Press kit</a>
+      <a href="#form" class="nav__cta">Work with him</a>
+    </nav>
+    <button class="nav__menu" id="menuBtn" aria-label="Open menu"><span></span><span></span></button>
+  </header>
+  <div class="menu" id="menu">
+    <a href="index.html">Home</a><a href="index.html#vault">Videos</a><a href="#remote">Remote sessions</a><a href="#services">Services</a><a href="#press">Press kit</a><a href="#form">Work with him</a>
+  </div>
+
+  <button class="navbtn navbtn--back" id="backBtn" aria-label="Go back"><span>←</span><b>Back</b></button>
+
+  <main>
+    <!-- HERO -->
+    <section class="bk-hero">
+      <p class="eyebrow mono">Work with Babykelo</p>
+      <div class="bk-hero__logo" data-logo aria-hidden="true"></div>
+      <h1 class="bk-hero__title">Let's make<br><em class="serif">the room move.</em></h1>
+      <p class="lead"><b>Remote studio sessions are open:</b> send your song from anywhere in the world and get real Babykelo drums back. He also takes concerts, tours, church, music direction, arrangement, production, mixing & mastering.</p>
+      <div class="bk-hero__actions">
+        <a href="#form" class="book-cta" data-magnetic><span>Work with Babykelo</span><i>→</i></a>
+        <a href="#remote" class="ghost-btn" data-magnetic>Remote sessions 🌍</a>
+        <a href="https://ig.me/m/babykelo" target="_blank" rel="noopener" class="ghost-btn" data-magnetic>DM on Instagram ↗</a>
+        <a href="#" target="_blank" rel="noopener" class="ghost-btn" id="heroWa" hidden data-magnetic>WhatsApp ↗</a>
+      </div>
+      <ul class="bk-trust mono">
+        <li>Worked with Wizkid, Ada Ehi & Tim Godfrey</li>
+        <li>MD · Voice of Karis (@vok_ent)</li>
+        <li>Band leader · MaskTunes</li>
+        <li>Flystickz & Centent artist</li>
+      </ul>
+    </section>
+
+
+    <!-- REMOTE SESSIONS -->
+    <section class="remote" id="remote">
+      <div class="remote__text">
+        <p class="eyebrow mono">01 — Remote studio sessions</p>
+        <h2 class="h2">Your song. <em class="serif">His drums. Anywhere.</em></h2>
+        <p class="lead">You don't need to be in Lagos. Send your track from London, Houston, Toronto, Accra, Joburg, or wherever you create. Babykelo records live drums on it in his studio and sends back mix-ready files.</p>
+        <ol class="remote__steps">
+          <li><b>Send</b><span>Your song, click/tempo, and a few references for the vibe.</span></li>
+          <li><b>Record</b><span>He tracks real drums on your song, with the groove, fills and feel you've heard in 150+ videos.</span></li>
+          <li><b>Receive</b><span>Clean multitrack WAV stems or a stereo drum mix. Mix & master on request.</span></li>
+        </ol>
+        <p class="remote__ideal mono">Ideal for: artists · producers · worship teams · songwriters · labels</p>
+        <a href="#form" class="book-cta" data-remote data-magnetic><span>Book a remote session</span><i>→</i></a>
+      </div>
+      <div class="remote__globe">
+        <canvas id="globe" aria-label="Globe showing songs travelling from cities around the world to Babykelo's studio in Lagos" role="img"></canvas>
+        <p class="remote__caption mono"><i></i>Lagos studio · receiving songs worldwide</p>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+      <p class="eyebrow mono">02 — What he does</p>
+      <h2 class="h2">Pick the <em class="serif">groove you need.</em></h2>
+      <div class="svc-grid" id="svcGrid"></div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process" aria-label="How booking works">
+      <ol class="steps">
+        <li><b>01</b><h3>Send the brief</h3><p>Fill in the form below: date, venue, what you need.</p></li>
+        <li><b>02</b><h3>Quick chat</h3><p>Babykelo or his team reaches out to confirm details & fee.</p></li>
+        <li><b>03</b><h3>Rehearse & arrange</h3><p>Set lists, arrangements, stems. Everything tight before the day.</p></li>
+        <li><b>04</b><h3>Show time</h3><p>You get the pocket, the fills and the energy the videos promise.</p></li>
+      </ol>
+    </section>
+
+    <!-- FORM -->
+    <section class="booking" id="form">
+      <div class="booking__intro">
+        <p class="eyebrow mono">03 — Work with him</p>
+        <h2 class="h2">Tell him <em class="serif">about it.</em></h2>
+        <p>The more detail you give, the faster he can come back to you. Fields marked <b>*</b> are required.</p>
+        <div class="direct">
+          <p class="mono direct__label">Or reach him directly</p>
+          <a href="https://ig.me/m/babykelo" target="_blank" rel="noopener"><span>Instagram</span><b>@babykelo</b></a>
+          <a href="#" id="directEmail" hidden><span>Email</span><b></b></a>
+          <a href="#" id="directWa" target="_blank" rel="noopener" hidden><span>WhatsApp</span><b></b></a>
+          <a href="https://www.youtube.com/@babykelo0" target="_blank" rel="noopener"><span>YouTube</span><b>@babykelo0</b></a>
+          <a href="https://www.facebook.com/babykelo" target="_blank" rel="noopener"><span>Facebook</span><b>Aramogho Kewe</b></a>
+        </div>
+      </div>
+
+      <form class="bform" id="bform" novalidate>
+        <div class="bform__row">
+          <label class="field"><span>Your name *</span><input name="name" required autocomplete="name" placeholder="Full name"></label>
+          <label class="field"><span>Organisation / artist</span><input name="org" autocomplete="organization" placeholder="Church, label, brand…"></label>
+        </div>
+        <div class="bform__row">
+          <label class="field"><span>Email or phone *</span><input name="contact" required autocomplete="email" placeholder="So he can reply"></label>
+          <label class="field"><span>Event date</span><input name="date" type="date"></label>
+        </div>
+        <fieldset class="field">
+          <legend>What do you need? *</legend>
+          <div class="pills" id="svcPills"></div>
+        </fieldset>
+        <div class="bform__row">
+          <label class="field"><span>City / venue</span><input name="venue" placeholder="Lagos, Abuja, London…"></label>
+          <label class="field"><span>Budget range</span>
+            <select name="budget">
+              <option value="">Prefer to discuss</option>
+              <option>Under ₦500k</option>
+              <option>₦500k – ₦1.5m</option>
+              <option>₦1.5m – ₦5m</option>
+              <option>₦5m+</option>
+              <option>International (USD/GBP)</option>
+            </select>
+          </label>
+        </div>
+        <div class="remote-fields" id="remoteFields" hidden>
+          <p class="mono remote-fields__label">🌍 Remote session details</p>
+          <label class="field"><span>Link to your song / stems</span><input name="song" type="url" placeholder="WeTransfer, Google Drive, Dropbox, SoundCloud private link…"></label>
+          <div class="bform__row">
+            <label class="field"><span>Tempo & key</span><input name="bpm" placeholder="e.g. 104 BPM, A minor"></label>
+            <label class="field"><span>Needed by</span><input name="deadline" type="date"></label>
+          </div>
+          <div class="bform__row">
+            <label class="field"><span>Deliverables</span>
+              <select name="deliver">
+                <option>Multitrack drum stems (WAV)</option>
+                <option>Stereo drum mix</option>
+                <option>Stems + stereo mix</option>
+                <option>Drums + full mix & master</option>
+              </select>
+            </label>
+            <label class="field"><span>Vibe / reference tracks</span><input name="refs" placeholder="Songs or artists it should feel like"></label>
+          </div>
+        </div>
+        <label class="field"><span>Tell him about the project *</span><textarea name="message" rows="5" required placeholder="Songs, set length, band size, rehearsal dates, anything he should know…"></textarea></label>
+        <p class="bform__error mono" id="formError" role="alert" hidden></p>
+        <button class="book-cta bform__submit" type="submit"><span>Prepare my request</span><i>→</i></button>
+      </form>
+    </section>
+
+    <!-- PRESS KIT -->
+    <section class="press" id="press">
+      <p class="eyebrow mono">04 — Press kit</p>
+      <h2 class="h2">For promoters <em class="serif">& press.</em></h2>
+      <div class="press__grid">
+        <article class="bio">
+          <div class="bio__head"><h3>Short bio</h3><button class="copy" data-copy="bioShort">Copy</button></div>
+          <p id="bioShort">Babykelo (Aramogho Oghenekevwe Samuel) is a Nigerian drummer, creative producer, music director, live arranger and mixing engineer from Delta State. One of Nigeria's most sought-after drummers, he has worked with Wizkid, Ada Ehi, Tim Godfrey and Masterkraft, and is a Flystickz and Centent Cymbals artist.</p>
+        </article>
+        <article class="bio">
+          <div class="bio__head"><h3>Full bio</h3><button class="copy" data-copy="bioLong">Copy</button></div>
+          <div id="bioLong">
+            <p>Aramogho Oghenekevwe Samuel, popularly known as Babykelo, was born on December 22nd and hails from Delta State, Nigeria. He is an outstanding drummer, creative producer, unique music director, excellent live arranger and mixing engineer.</p>
+            <p>His love for drumming started in childhood, when he played every object around him like a drum. His mother's love for good music, especially the sounds of the 1980s, shaped his rhythmic and melodic foundation.</p>
+            <p>A band finalist at Star Quest 2012 (3rd place), he is music director for Voice of Karis (V.O.K) and band leader of MaskTunes. He has worked with Wizkid, Ada Ehi, Dr. Eddy, Tim Godfrey, Masterkraft, Ramoni, DJ Tunez, Victony and Ccioma. He is an endorsed Flystickz artist with his own BabyKelo Signature Series 5B drumsticks, and a Centent Cymbals & Gongs artist.</p>
+          </div>
+        </article>
+        <article class="assets-card">
+          <h3>Downloads</h3>
+          <div class="dl">
+            <a href="assets/kelo.jpg" download="babykelo-press-photo-1.jpg"><img src="assets/kelo.jpg" alt="Press photo: Babykelo with Flystickz drumsticks" loading="lazy"><span>Press photo 1</span></a>
+            <a href="assets/avatar.jpg" download="babykelo-press-photo-2.jpg"><img src="assets/avatar.jpg" alt="Press photo: Babykelo behind the kit" loading="lazy"><span>Press photo 2</span></a>
+            <a href="assets/logo.svg" download="babykelo-signature-logo.svg" class="dl__logo"><span class="logo-svg" data-logo></span><span>Signature logo (SVG)</span></a>
+            <a href="assets/mark.svg" download="babykelo-mark.svg" class="dl__logo"><img src="assets/mark.svg" alt="Babykelo smiley mark" loading="lazy"><span>Mark (SVG)</span></a>
+          </div>
+        </article>
+        <article class="facts-card">
+          <h3>Quick facts</h3>
+          <ul class="facts">
+            <li><span class="mono">Roles</span><b>Drummer · Producer · MD · Arranger · Mix engineer</b></li>
+            <li><span class="mono">From</span><b>Delta State, Nigeria</b></li>
+            <li><span class="mono">Signature sticks</span><b>Flystickz BabyKelo 5B</b></li>
+            <li><span class="mono">Endorsements</span><b>Flystickz · Centent Cymbals & Gongs</b></li>
+            <li><span class="mono">Bands</span><b>Voice of Karis / VOK Ent (MD & Producer) · MaskTunes (Band Leader)</b></li>
+            <li><span class="mono">Online</span><b>20K+ Instagram · 7K+ YouTube · 150+ videos</b></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <footer class="foot mono foot--book">
+      <span>© <span id="yr"></span> Aramogho Oghenekevwe Samuel · Babykelo</span>
+      <a href="index.html">← Back to the main site</a>
+    </footer>
+  </main>
+
+  <!-- Booking ready sheet -->
+  <div class="modal" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="sheet">
+      <button class="icon-btn sheet__x" data-close aria-label="Close">✕</button>
+      <p class="eyebrow mono">Your request is ready</p>
+      <h3 id="sheetTitle">Choose how to send it</h3>
+      <pre class="sheet__msg" id="sheetMsg"></pre>
+      <div class="sheet__actions" id="sheetActions"></div>
+      <p class="sheet__note mono" id="sheetNote"></p>
+    </div>
+  </div>
+
+  <script type="module" src="js/contact.js"></script>
+</body>
+</html>
