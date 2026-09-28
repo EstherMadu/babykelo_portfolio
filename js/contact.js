@@ -26,12 +26,12 @@ import('./scene.js').then(m => { const sc = m.createScene($('#stage'), groove); 
 
 // ─── Services ───────────────────────────────────────────────
 const SERVICES = [
-  { k: 'remote', t: 'Remote studio sessions', d: 'Wherever you are in the world, send him your song. He records real drums on it in his studio and sends back clean, mix-ready stems. No flights, no visas, just the groove.', tag: 'Worldwide', hot: true },
+  { k: 'remote', t: 'Remote studio sessions', d: 'Wherever you are in the world, send me your song. I\'ll record real drums on it in my studio and send back clean, mix-ready stems. No flights, no visas, just the groove.', tag: 'Worldwide', hot: true },
   { k: 'session', t: 'In-studio recording', d: 'Studio tracking for singles and albums in Lagos. Clean, musical takes that sit in the mix.', tag: 'Studio' },
   { k: 'live', t: 'Live drumming', d: 'Concerts, tours, festivals, weddings and corporate shows. Pocket first, fireworks when the moment calls.', tag: 'Stage' },
-  { k: 'church', t: 'Church & worship', d: 'Praise breaks, worship nights and conferences. He has played with Ada Ehi, Tim Godfrey and choirs across Lagos.', tag: 'Gospel' },
-  { k: 'md', t: 'Music direction', d: 'He leads the band for your artist or event, from rehearsals and set flow to cues and transitions. MD for Voice of Karis.', tag: 'MD' },
-  { k: 'arrange', t: 'Live arrangement', d: 'He turns records into stage versions with intros, builds, medleys and endings that land.', tag: 'Arrange' },
+  { k: 'church', t: 'Church & worship', d: 'Praise breaks, worship nights and conferences. I\'ve played with Ada Ehi, Tim Godfrey and choirs across Lagos.', tag: 'Gospel' },
+  { k: 'md', t: 'Music direction', d: 'I\'ll lead the band for your artist or event, from rehearsals and set flow to cues and transitions. MD for Voice of Karis.', tag: 'MD' },
+  { k: 'arrange', t: 'Live arrangement', d: 'I turn records into stage versions with intros, builds, medleys and endings that land.', tag: 'Arrange' },
   { k: 'produce', t: 'Production', d: 'Beats and records built from the rhythm up. Afrobeats, highlife, gospel, amapiano and more.', tag: 'Produce' },
   { k: 'mix', t: 'Mixing & mastering', d: 'Release-ready mixes and masters for your songs, handled by the same ears that tune the snare.', tag: 'Mix' },
   { k: 'clinic', t: 'Clinics & masterclasses', d: 'Workshops, drum clinics and mentoring for churches, schools and drum communities.', tag: 'Teach' },
@@ -93,7 +93,7 @@ form.addEventListener('submit', e => {
   e.preventDefault();
   const f = new FormData(form);
   const d = Object.fromEntries(f); d.services = f.getAll('svc');
-  const err = !d.name?.trim() ? 'Please add your name.' : !d.contact?.trim() ? 'Add an email or phone so he can reply.' : !d.services.length ? 'Pick at least one service.' : !d.message?.trim() ? 'Tell him a little about the project.' : '';
+  const err = !d.name?.trim() ? 'Please add your name.' : !d.contact?.trim() ? 'Add an email or phone so I can reply.' : !d.services.length ? 'Pick at least one service.' : !d.message?.trim() ? 'Tell me a little about the project.' : '';
   $$('.field', form).forEach(el => el.classList.remove('is-bad'));
   if (err) {
     const el = $('#formError'); el.textContent = err; el.hidden = false;

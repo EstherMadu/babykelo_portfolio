@@ -396,7 +396,7 @@ function flash(el) { el.classList.remove('is-hit'); void el.offsetWidth; el.clas
 async function strike(name) { await groove.init(); groove.trigger(name); }
 $('#pads').addEventListener('pointerdown', e => { const p = e.target.closest('.pad'); if (p) { e.preventDefault(); strike(p.dataset.sound); } });
 addEventListener('keydown', e => {
-  if (e.key === 'Escape') { closeVideo(); closeMenu(); return; }
+  if (e.key === 'Escape') { closeVideo(); closeMenu(); hideGear(); return; }
   if (!modal.hidden) { if (e.key === 'ArrowRight') nav(1); if (e.key === 'ArrowLeft') nav(-1); return; }
   if (e.target.matches('input, select, textarea') || e.metaKey || e.ctrlKey || e.altKey || e.repeat) return;
   if (gate.classList.contains('is-gone') && KEYMAP[e.key.toLowerCase()]) strike(KEYMAP[e.key.toLowerCase()]);

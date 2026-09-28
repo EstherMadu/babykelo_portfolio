@@ -250,6 +250,9 @@ export function createScene(canvas, groove) {
     s.position.y = 0.85; g.add(s);
     const tip = new THREE.Mesh(new THREE.SphereGeometry(0.032, 16, 12), wood);
     tip.scale.y = 1.6; tip.position.y = 1.72; g.add(tip);
+    // invisible, fatter hit area so the thin sticks are easy to tap
+    const hitArea = new THREE.Mesh(new THREE.CylinderGeometry(0.11, 0.11, 1.8, 8), new THREE.MeshBasicMaterial({ visible: false }));
+    hitArea.position.y = 0.88; g.add(hitArea);
     return g;
   }
 
