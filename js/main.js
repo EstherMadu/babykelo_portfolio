@@ -603,7 +603,7 @@ const GEAR = {
   kick: {
     title: 'Kick drum', tag: 'The heartbeat', sound: 'kick',
     text: 'His signature on the front head, and the downbeat of every Babykelo groove. Want this pocket on your stage or your record?',
-    actions: [{ label: 'Work with Babykelo →', href: 'contact.html' }, { label: 'Remote sessions 🌍', href: 'contact.html#remote' }],
+    actions: [{ label: 'Work with Babykelo →', href: 'contact.html' }],
   },
   snare: {
     title: 'Snare drum', tag: 'Where the ghost notes live', sound: 'snare',
